@@ -117,6 +117,13 @@ h3 { font-size: 23px; line-height: 1.2; letter-spacing: -.25px; }
 .path-card h3 { margin-bottom: 10px; font-size: 24px; }
 .path-card p { margin: 0; color: #59635a; font-size: 14px; }
 .path-note { max-width: 850px; margin: 22px 0 0; padding-left: 16px; border-left: 2px solid var(--sage-ink); color: #5b665d; font-size: 12.5px; }
+/* Las 3 claves del método (las mismas de los Reels). */
+.claves-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+/* Invitaciones intermedias a agendar, para no dejar tramos largos sin botón. */
+.inline-cta { display: flex; align-items: center; justify-content: space-between; gap: 22px; margin-top: 28px; padding: 22px 26px; border: 1px solid var(--line); border-radius: 16px; background: var(--white); }
+.inline-cta p { margin: 0; font-family: "Playfair Display", Georgia, serif; font-size: 21px; line-height: 1.35; }
+.inline-cta .button { flex-shrink: 0; }
 
 .practical-section { background: var(--paper); }
 .practical-heading { display: grid; grid-template-columns: .9fr 1.1fr; gap: 14px 55px; align-items: start; margin-bottom: 31px; }
@@ -241,6 +248,9 @@ h3 { font-size: 23px; line-height: 1.2; letter-spacing: -.25px; }
   .recognition-card h3 { margin-top: 1px; }
   .pathway-grid { gap: 13px; }
   .path-card { min-height: 0; padding: 23px; }
+  .claves-grid { grid-template-columns: 1fr; }
+  .inline-cta { flex-direction: column; align-items: stretch; text-align: center; padding: 20px; }
+  .inline-cta p { font-size: 19px; }
   .practical-heading { grid-template-columns: 1fr; gap: 10px; }
   .practical-heading .eyebrow { grid-column: auto; }
   .principles-grid, .testimonials-grid { grid-template-columns: 1fr; }
