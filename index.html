@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="style.css?v=8">
 
   <!-- Meta Pixel: se conserva el ID de la landing anterior. -->
   <script>
@@ -173,6 +173,15 @@
           <h2>Cada duelo es distinto. Estas son algunas experiencias de personas que han trabajado conmigo.</h2>
         </div>
         <div class="testimonials-grid">
+          <figure class="testimonial-featured">
+            <video class="testimonial-video" controls playsinline preload="none" poster="testimonio-silvia.jpg" width="720" height="1280">
+              <source src="testimonio-silvia.mp4" type="video/mp4">
+            </video>
+            <blockquote class="testimonial-card testimonial-card-long">
+              <p>“Pensé que me iba a quedar con esa carga emocional toda la vida. Con cada sesión me sentía escuchada, y <strong>esa carga que sentía en los hombros empezó a pasar</strong>. Hoy se recuerda <strong>con mucho más amor que pena</strong>. La pena siempre va a estar, pero se logra conversar de ellos sin tanta pena. Y entendí que <strong>tenía derecho a sentir pena, a llorar si quería</strong>.”</p>
+              <footer>Silvia, en duelo por su marido</footer>
+            </blockquote>
+          </figure>
           <blockquote class="testimonial-card">
             <p>“Fui logrando <strong>recordar esos momentos sin la misma angustia</strong>. Hoy lo recuerdo a diario con el mismo amor y siento su compañía, <strong>sin la angustia que antes no me dejaba estar tranquila</strong>.”</p>
             <footer>Carolina</footer>
@@ -180,10 +189,6 @@
           <blockquote class="testimonial-card">
             <p>“Benjamín me dio <strong>la confianza y la tranquilidad para encontrarme conmigo misma</strong>. Aprendí a comunicar mis emociones. Ahora soy más humana, más empática. Valoro más las cosas.”</p>
             <footer>Marilén</footer>
-          </blockquote>
-          <blockquote class="testimonial-card">
-            <p>“La terapia logró muchas cosas positivas en mí: <strong>bajó mi ansiedad</strong>, aprendí nuevas maneras de ver las cosas y a <strong>establecer límites conmigo misma y con los demás</strong>.”</p>
-            <footer>Silvia</footer>
           </blockquote>
         </div>
         <p class="testimonial-note">Los testimonios reflejan experiencias personales; cada proceso terapéutico es único.</p>
@@ -386,6 +391,12 @@
       link.addEventListener('click', function() {
         if (window.fbq) { fbq('trackCustom', 'ClickWhatsApp'); }
       });
+    });
+    // Registra cuántas personas ponen play al video testimonio (una vez por visita).
+    document.querySelectorAll('.testimonial-video').forEach(function(video) {
+      video.addEventListener('play', function() {
+        if (window.fbq) { fbq('trackCustom', 'PlayTestimonioVideo'); }
+      }, { once: true });
     });
   </script>
 </body>
