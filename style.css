@@ -124,6 +124,15 @@ h3 { font-size: 23px; line-height: 1.2; letter-spacing: -.25px; }
 /* Las 3 claves del método (las mismas de los Reels). */
 .claves-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
+/* El proceso en 4 momentos: línea de pasos numerados, distinta de las tarjetas de las 3 claves. */
+.momentos { margin-top: 44px; padding-top: 36px; border-top: 1px solid var(--sage-line); }
+.momentos-title { max-width: 700px; margin-bottom: 24px; font-size: clamp(24px, 3vw, 30px); }
+.momentos-grid { counter-reset: momento; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin: 0; padding: 0; list-style: none; }
+.momento { counter-increment: momento; position: relative; padding: 50px 0 0; border-top: 3px solid var(--terracota); }
+.momento::before { content: counter(momento); position: absolute; top: 12px; left: 0; color: var(--sage-ink); font-family: "EB Garamond", Georgia, serif; font-size: 26px; font-weight: 600; line-height: 1; }
+.momento h4 { margin: 0 0 8px; font-family: "EB Garamond", Georgia, serif; font-size: 22px; font-weight: 600; line-height: 1.2; }
+.momento p { margin: 0; color: var(--body); font-size: 14px; }
+
 /* Invitaciones intermedias a agendar, para no dejar tramos largos sin botón. */
 .inline-cta { display: flex; align-items: center; justify-content: space-between; gap: 22px; margin-top: 28px; padding: 22px 26px; border: 1px solid var(--line); border-radius: 16px; background: var(--white); }
 .inline-cta p { margin: 0; font-family: "EB Garamond", Georgia, serif; font-size: 21px; line-height: 1.35; }
@@ -263,6 +272,7 @@ h3 { font-size: 23px; line-height: 1.2; letter-spacing: -.25px; }
   .pathway-grid { gap: 13px; }
   .path-card { min-height: 0; padding: 23px; }
   .claves-grid { grid-template-columns: 1fr; }
+  .momentos-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 18px; }
   .inline-cta { flex-direction: column; align-items: stretch; text-align: center; padding: 20px; }
   .inline-cta p { font-size: 19px; }
   .practical-heading { grid-template-columns: 1fr; gap: 10px; }
@@ -329,6 +339,10 @@ h3 { font-size: 23px; line-height: 1.2; letter-spacing: -.25px; }
   .nature-photo { width: min(200px, 65vw); }
   .nature-photo img { width: 100%; height: min(125px, 40vw); aspect-ratio: auto; border-radius: 11px; }
   .pathway-grid { grid-template-columns: 1fr; }
+  .momentos { margin-top: 32px; padding-top: 26px; }
+  .momentos-grid { grid-template-columns: 1fr; gap: 20px; }
+  .momento { padding: 0 0 0 44px; border-top: 0; border-left: 3px solid var(--terracota); padding-left: 18px; }
+  .momento::before { position: static; display: block; margin-bottom: 4px; font-size: 22px; }
   .path-card { padding: 18px; }
   .path-card h3 { font-size: 22px; }
   .path-card p { font-size: 14px; }
