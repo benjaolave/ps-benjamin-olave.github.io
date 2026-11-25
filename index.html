@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=8">
+  <link rel="stylesheet" href="style.css?v=9">
 
   <!-- Meta Pixel: se conserva el ID de la landing anterior. -->
   <script>
@@ -53,6 +53,7 @@
         <p class="lead">Un espacio para trabajar tu duelo a tu ritmo, para que la pérdida forme parte de tu historia sin ocuparlo todo.</p>
         <a class="button booking-link hero-cta" href="https://encuadrado.com/p/benjamin-olave" target="_blank" rel="noopener noreferrer">Agendar evaluación sin costo <span aria-hidden="true">→</span></a>
         <p class="hero-meta"><span>Atención online</span><span aria-hidden="true">·</span><span>60 minutos</span><span aria-hidden="true">·</span><span>Evaluación inicial sin costo</span></p>
+        <a class="hero-story-link" href="#historia"><span class="play-dot" aria-hidden="true">▶</span> Escucha la experiencia de Silvia (1 min)</a>
       </div>
       <figure class="hero-photo">
         <img src="hero-benjamin.jpg" alt="Benjamín Olave, psicólogo clínico, en un espacio de trabajo cálido y natural" width="1100" height="1366" fetchpriority="high">
@@ -107,10 +108,22 @@
           </div>
         </div>
       </div>
-      <div class="wrap">
-        <div class="inline-cta">
-          <p>Si te reconoces en esto, podemos conversarlo con calma.</p>
-          <a class="button booking-link" href="https://encuadrado.com/p/benjamin-olave" target="_blank" rel="noopener noreferrer">Agendar evaluación sin costo <span aria-hidden="true">→</span></a>
+    </section>
+
+    <section class="section story-section" id="historia">
+      <div class="wrap story-grid">
+        <video class="testimonial-video" controls playsinline preload="none" poster="testimonio-silvia.jpg" width="720" height="1280" aria-label="Video testimonio de Silvia, con subtítulos">
+          <source src="testimonio-silvia.mp4" type="video/mp4">
+        </video>
+        <div class="story-copy">
+          <p class="eyebrow">LA EXPERIENCIA DE SILVIA</p>
+          <h2>“Pensé que me iba a quedar así toda la vida.”</h2>
+          <p>Silvia llegó a terapia después de la muerte de su marido, con una carga que sentía en el cuerpo y que no se iba. En este video cuenta, con sus propias palabras, cómo vivió su proceso.</p>
+          <p class="story-meta">1 minuto · con subtítulos · Cada proceso es único.</p>
+          <div class="story-cta">
+            <p>Si te reconoces en lo que cuenta, podemos conversarlo con calma.</p>
+            <a class="button booking-link" href="https://encuadrado.com/p/benjamin-olave" target="_blank" rel="noopener noreferrer">Agendar evaluación sin costo <span aria-hidden="true">→</span></a>
+          </div>
         </div>
       </div>
     </section>
@@ -173,15 +186,10 @@
           <h2>Cada duelo es distinto. Estas son algunas experiencias de personas que han trabajado conmigo.</h2>
         </div>
         <div class="testimonials-grid">
-          <figure class="testimonial-featured">
-            <video class="testimonial-video" controls playsinline preload="none" poster="testimonio-silvia.jpg" width="720" height="1280">
-              <source src="testimonio-silvia.mp4" type="video/mp4">
-            </video>
-            <blockquote class="testimonial-card testimonial-card-long">
-              <p>“Pensé que me iba a quedar con esa carga emocional toda la vida. Con cada sesión me sentía escuchada, y <strong>esa carga que sentía en los hombros empezó a pasar</strong>. Hoy se recuerda <strong>con mucho más amor que pena</strong>. La pena siempre va a estar, pero se logra conversar de ellos sin tanta pena. Y entendí que <strong>tenía derecho a sentir pena, a llorar si quería</strong>.”</p>
-              <footer>Silvia, en duelo por su marido</footer>
-            </blockquote>
-          </figure>
+          <blockquote class="testimonial-card testimonial-card-long">
+            <p>“Pensé que me iba a quedar con esa carga emocional toda la vida. Con cada sesión me sentía escuchada, y <strong>esa carga que sentía en los hombros empezó a pasar</strong>. Hoy se recuerda <strong>con mucho más amor que pena</strong>. La pena siempre va a estar, pero se logra conversar de ellos sin tanta pena. Y entendí que <strong>tenía derecho a sentir pena, a llorar si quería</strong>.”</p>
+            <footer>Silvia, en duelo por su marido · <a href="#historia">ver su video</a></footer>
+          </blockquote>
           <blockquote class="testimonial-card">
             <p>“Fui logrando <strong>recordar esos momentos sin la misma angustia</strong>. Hoy lo recuerdo a diario con el mismo amor y siento su compañía, <strong>sin la angustia que antes no me dejaba estar tranquila</strong>.”</p>
             <footer>Carolina</footer>
